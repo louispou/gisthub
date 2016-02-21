@@ -43,8 +43,17 @@
 </nav>
 </head>
 <body>
-  <div class="jumbotron" style:"margin-top:0px;">
-    <%= yield %>
+  <div class="jumbotron" style:"margin-top:0px">
+    <% if notice%>
+    <p class=" alert alert-info"> <%=notice%></p>
+    <%end%>
+    <% if alert%>
+    <p class=" alert alert-danger"> <%=alert%></p>
+    <%end%>
+    
+    <div class="row">
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>

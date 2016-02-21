@@ -14,7 +14,3 @@
  *= require_self
  *= require bootstrap.min
  */
-.jumbotron{
-	margin-top: 0px;
-	background-color: green;
-}
