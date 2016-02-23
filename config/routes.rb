@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+ 
   get 'gists/create'
-
   get 'gists/:id' => 'gists#show'
   get 'gists/create'
   get 'gists/index'
-  get 'gists/create' => 'gists#create'
+  get 'gists/create' 
+  #post 'gists/create' => 'gists#create'
   devise_for :users
   root :to => 'gists#index'
   
