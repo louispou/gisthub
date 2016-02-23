@@ -1,0 +1,19 @@
+
+<div class = "col-md-2"></div>
+<div class="col-md-7">
+	<% @gists.each do |gist| %>
+
+	<a href="users/<%=@users.find(gist.user_id)%>" ><%= @users.find(gist.user_id).name%> </a>/
+	<a href="gists/<%= gist.id %>"> <%=gist.file %></a>
+	<div class="panel panel-default">
+		<div class="panel-heading"><%=gist.description%></div>
+		<a href="gists/<%= gist.id %>">
+			<div class="panel-body">
+				<%=gist.content%>
+			</div>
+		</div>
+	</a>
+</div>
+<br><br>
+	<%end%>
+</div>
